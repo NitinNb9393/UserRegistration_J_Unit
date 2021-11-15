@@ -17,7 +17,7 @@ public class UserValidateTest {
 
 	@Test
 	public void emailTestValidator() {
-		assertEquals(true, UserValidate.emailValidator(null));
+		assertEquals(true, UserValidate.emailValidator());
 	}
 
 	@Test
