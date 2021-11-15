@@ -19,4 +19,9 @@ public class UserValidateTest {
 	public void emailTestValidator() {
 		assertEquals(true, UserValidate.emailValidator());
 	}
+
+	@Test
+	public void mobNumTestValidator() {
+		assertEquals(true, UserValidate.mobNumValidator());
+	}
 }
