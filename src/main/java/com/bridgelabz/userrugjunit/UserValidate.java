@@ -14,4 +14,11 @@ public class UserValidate {
 		String fName = uservalidate.sc.nextLine();
 		return Pattern.matches(uservalidate.NAME_VALIDATOR, fName);
 	}
+
+	public static boolean lastNameValidator() {
+		UserValidate uservalidate = new UserValidate();
+		System.out.println("Enter the Last name: ");
+		String fName = uservalidate.sc.nextLine();
+		return Pattern.matches(uservalidate.NAME_VALIDATOR, fName);
+	}
 }
