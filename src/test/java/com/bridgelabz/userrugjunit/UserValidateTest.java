@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class UserValidateTest {
 	@Test
-	public void firstNameTestValidator() {
+	public void givenFirstNameShouldReturnTrue() {
 		assertEquals(true, UserValidate.firstNameValidator());
 	}
 
@@ -17,7 +17,7 @@ public class UserValidateTest {
 
 	@Test
 	public void emailTestValidator() {
-		assertEquals(true, UserValidate.emailValidator());
+		assertEquals(true, UserValidate.emailValidator(null));
 	}
 
 	@Test
@@ -38,5 +38,17 @@ public class UserValidateTest {
 	@Test
 	public void password4Validator() {
 		assertEquals(true, UserValidate.password4Validator());
+	}
+
+	@Test
+	public void givenMessage_WhenHappy_ShouldReturnEntrySuccessful() {
+		String result = MoodAnalyser.analyseMood("User is Happy");
+		assertEquals("Entry Successful", result);
+	}
+
+	@Test
+	public void givenEmail2_WhenNotProper_ShouldReturnEntryFailed() {
+		String result = MoodAnalyser.analyseMood("User is Sad");
+		assertEquals("Entry Failed", result);
 	}
 }
